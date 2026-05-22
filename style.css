@@ -101,3 +101,19 @@ body{
     }
 
 }
+
+/* Delete Button */
+
+.delete-btn{
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ef4444;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover{
+    background-color: #dc2626;
+}
