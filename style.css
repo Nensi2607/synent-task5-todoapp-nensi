@@ -117,3 +117,32 @@ body{
 .delete-btn:hover{
     background-color: #dc2626;
 }
+
+/* Task Content */
+
+.task-content{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Checkbox */
+
+.check-task{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Completed Task */
+
+.completed span{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Smooth Transition */
+
+.task-item{
+    transition: 0.3s;
+}

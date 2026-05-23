@@ -22,10 +22,16 @@ function addTask(){
     li.classList.add("task-item");
 
     li.innerHTML = `
-        <span>${taskText}</span>
-        <button class="delete-btn">Delete</button>
-    `;
+    <div class="task-content">
 
+        <input type="checkbox" class="check-task">
+
+        <span>${taskText}</span>
+
+    </div>
+
+    <button class="delete-btn">Delete</button>
+`;
     /* Add Task to List */
 
     taskList.appendChild(li);
@@ -43,6 +49,16 @@ function addTask(){
         li.remove();
 
     });
+
+    /* Complete Task */
+
+const checkTask = li.querySelector(".check-task");
+
+checkTask.addEventListener("change", function(){
+
+    li.classList.toggle("completed");
+
+});
 
 }
 
