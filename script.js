@@ -1,6 +1,7 @@
 const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
+const emptyMessage = document.getElementById("emptyMessage");
 
 /* Load Tasks When Page Opens */
 
@@ -20,6 +21,7 @@ function addTask(){
     createTaskElement(taskText, false);
 
     saveTasks();
+    toggleEmptyMessage();
 
     taskInput.value = "";
 }
@@ -59,6 +61,7 @@ function createTaskElement(taskText, completed){
         li.remove();
 
         saveTasks();
+        toggleEmptyMessage();
 
     });
 
@@ -112,6 +115,21 @@ function loadTasks(){
         createTaskElement(task.text, task.completed);
 
     });
+    
+    toggleEmptyMessage();
+
+}
+
+/* Toggle Empty Message */
+
+function toggleEmptyMessage(){
+
+    if(taskList.children.length === 0){
+        emptyMessage.style.display = "block";
+    }
+    else{
+        emptyMessage.style.display = "none";
+    }
 
 }
 
